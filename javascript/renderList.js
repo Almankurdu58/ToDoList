@@ -17,7 +17,7 @@ export function renderList() {
         editButton.textContent = 'Edit';
         editButton.addEventListener('click', () => editTask(index));
         editButton.classList.add("btn"); 
-        editButton.classList.add("btn-primary");
+        editButton.classList.add("btn-secondary");
 
         //löschen
         let deleteButton = document.createElement('deleteButton');
