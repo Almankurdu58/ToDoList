@@ -6,7 +6,6 @@ let inputFeld = document.getElementById('toDo');
 const button = document.getElementById('apply');
 button.addEventListener('click', getText);
 
-
 function getText() {
     let inputValue = inputFeld.value;
 
@@ -15,8 +14,14 @@ function getText() {
         inputFeld.value = '';
 
         renderList();
+
+       
     }
 }
+
+
+
+
 
 //nächste Schritte:
 //angular
