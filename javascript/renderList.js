@@ -1,5 +1,4 @@
 import { toDoList } from "./repository.js";
-// import { addDragAndDropEvents } from "./dragDrop.js";
 
 export function renderList() {
     let ul = document.getElementById('task');
@@ -42,6 +41,7 @@ export function renderList() {
 
          // Add drag-and-drop events
          addDragAndDropEvents(li);
+        //  search();
     });
 }
 function editTask(index) {

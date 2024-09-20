@@ -1,7 +1,6 @@
 // import { toDoList } from "./repository";
 // import { renderList } from "./renderList";
 
-
 //  export function addDragAndDropEvents(li) {
 //     li.addEventListener('dragstart', function (e) {
 //         e.dataTransfer.effectAllowed = 'move';
