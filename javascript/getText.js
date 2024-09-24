@@ -5,6 +5,11 @@ import { toDoList } from "./repository.js";
 let inputFeld = document.getElementById('toDo');
 const button = document.getElementById('apply');
 button.addEventListener('click', getText);
+inputFeld.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        getText();
+    }
+});
 
 function getText() {
     let inputValue = inputFeld.value;
@@ -14,12 +19,8 @@ function getText() {
         inputFeld.value = '';
 
         renderList();
-
-       
     }
 }
-
-
 
 
 

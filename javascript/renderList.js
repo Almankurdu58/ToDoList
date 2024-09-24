@@ -13,15 +13,17 @@ export function renderList() {
         li.setAttribute('data-index', index); // Store the index of the item
 
         // container für buttons
-        let buttonContainer = document.createElement('div');
+        li.classList.add("buttonContainer");
 
         //editieren
         let editButton = document.createElement('Button');
         editButton.textContent = 'Edit';
         editButton.addEventListener('click', () => editTask(index));
         editButton.classList.add("btn"); 
-        editButton.classList.add("btn-secondary");
+        editButton.classList.add("btn-primary");
         editButton.classList.add("buttonStyle");
+        editButton.classList.add("editButton");
+
 
         //löschen
         let deleteButton = document.createElement('Button');
@@ -30,19 +32,20 @@ export function renderList() {
         deleteButton.classList.add("btn"); 
         deleteButton.classList.add("btn-danger");
         deleteButton.classList.add("buttonStyle");
+        deleteButton.classList.add("deleteButton");
+  
 
 
         //die buttons werden in der Liste hingefügt
         li.appendChild(editButton);
         li.appendChild(deleteButton);
-        li.appendChild(buttonContainer);
         ul.appendChild(li);
         
 
          // Add drag-and-drop events
          addDragAndDropEvents(li);
         //  search();
-    });
+        });
 }
 function editTask(index) {
     let newName = prompt("Edit Task:", toDoList[index]); // öffnet prompt dialog box
@@ -92,3 +95,4 @@ function addDragAndDropEvents(li) {
         items.forEach(item => item.classList.remove('drag-over'));
     });
 }
+
